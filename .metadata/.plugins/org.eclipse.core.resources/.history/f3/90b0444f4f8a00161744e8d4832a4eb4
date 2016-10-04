@@ -1,0 +1,7 @@
+import java.util.Date;
+
+public class CourseEvent extends EventObject{
+	private Date midtermDate;
+
+
+}
