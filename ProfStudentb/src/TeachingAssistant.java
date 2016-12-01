@@ -34,7 +34,6 @@ public class TeachingAssistant implements CourseListener{
 
 	@Override
 	public void midtermPostponed(CourseEvent e) {
-		// TODO Auto-generated method stub
 		this.postpone(e.getDate());
 	}
 }

@@ -42,7 +42,7 @@ public class Prof {
 	}
 	
 	public void postponeMidterm(Date date){
-		this.midtermDate = date;
+		//this.midtermDate = date;
 		CourseEvent e = new CourseEvent(date);
 		for(CourseListener c1: courseListeners){
 			c1.midtermPostponed(e);

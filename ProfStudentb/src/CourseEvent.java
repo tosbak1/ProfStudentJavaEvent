@@ -7,7 +7,6 @@ public class CourseEvent extends EventObject{
 	public CourseEvent(Object arg0) {
 		super(arg0);
 		midtermDate = (Date) arg0;
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Date getDate(){
