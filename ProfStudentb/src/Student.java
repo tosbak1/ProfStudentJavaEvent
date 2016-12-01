@@ -29,24 +29,11 @@ public class Student implements CourseListener{
 
 	@Override
 	public void midtermAnnounced(CourseEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getDate() != null){
-			this.party(e.getDate());
-		}
-		else{
-			this.study(e.getDate());
-		}
-		
+		this.study(e.getDate());	
 	}
 
 	@Override
 	public void midtermPostponed(CourseEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getDate() != null){
-			this.party(e.getDate());
-		}
-		else{
-			this.study(e.getDate());
-		}
+		this.party(e.getDate());
 	}
 }

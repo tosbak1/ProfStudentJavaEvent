@@ -29,19 +29,12 @@ public class TeachingAssistant implements CourseListener{
 
 	@Override
 	public void midtermAnnounced(CourseEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getDate() != null){
-			this.postpone(e.getDate());
-		}
-		else{
-			this.proctor(e.getDate());
-		}
-		
+		this.proctor(e.getDate());
 	}
 
 	@Override
 	public void midtermPostponed(CourseEvent e) {
 		// TODO Auto-generated method stub
-		
+		this.postpone(e.getDate());
 	}
 }

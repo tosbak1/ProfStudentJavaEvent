@@ -9,9 +9,7 @@ import java.util.Date;
 public class Prof {
 	private String name;
 	private Date midtermDate;
-	private ArrayList<Student> students;
 	private ArrayList<CourseListener> courseListeners;
-	private TeachingAssistant ta;
 
 	public Prof(String aName) {
 		this.name = aName;
@@ -52,16 +50,6 @@ public class Prof {
 
 	}
 	
-	public void setTA(TeachingAssistant theTA){
-		this.ta = theTA;
-	}
-	
-	public void addStudent(Student s){
-		this.students.add(s);
-	}
-	
-	
-
 
 	public static void main(String[] args) {
 
@@ -70,14 +58,14 @@ public class Prof {
 		Student s2 = new Student("Bart");
 		TeachingAssistant ta = new TeachingAssistant("Michael");
 	
-	
+		p.addCourseListener(ta);
 		p.addCourseListener(s);
 		p.addCourseListener(s2);
-		p.addCourseListener(ta);
 	
 		Date midterm = new Date();
 		p.setMidterm(midterm);
-	
+		System.out.println();
+		
 		p.postponeMidterm(new Date(midterm.getTime() + 1000000000));
 	}
 
